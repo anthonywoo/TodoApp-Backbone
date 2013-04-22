@@ -1,0 +1,15 @@
+<ul>
+  <a href="#/tasks/new" %>
+    Create New
+  </a>
+  <br><br>
+  <% tasks.each(function (task) { %>
+    <li class="task">
+    <%=task.escape('id') %>
+      <a href="#/tasks/<%= task.escape('id') %>">
+        <%= task.escape("title") %>
+      </a>
+    </li>
+  <% }); %>
+
+</ul>

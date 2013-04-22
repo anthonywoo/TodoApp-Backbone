@@ -1,0 +1,11 @@
+<div id="sidebar" style="float: left;"></div>
+<div id="content" style="float: left;"></div>
+
+<script type="text/javascript">
+  $(function(){
+    var tasksData = <%= Task.all.to_json.html_safe %>;
+    console.log("HIT ERB INDEX")
+    window.TD.initialize($("#sidebar"), $("#content"), tasksData);
+
+  });
+</script>
